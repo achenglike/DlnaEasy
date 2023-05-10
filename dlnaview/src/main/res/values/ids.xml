@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dlna_select_device_tip" type="id" />
+    <item name="dlna_refresh_device" type="id" />
+    <item name="dlna_device_list" type="id" />
+    <item name="dlna_search_loading" type="id" />
+    <item name="dlna_search_loading_label" type="id" />
+    <item name="dlna_search_result" type="id" />
+
+
+    <item name="dlna_render_device_name" type="id" />
+    <item name="dlna_render_change" type="id" />
+    <item name="dlna_stop" type="id" />
+    <item name="dlna_media_name" type="id" />
+    <item name="dlna_play" type="id" />
+    <item name="dlna_volume_add" type="id" />
+    <item name="dlna_volume_reduce" type="id" />
+    <item name="dlna_fast_back" type="id" />
+    <item name="dlna_fast_forward" type="id" />
+    <item name="dlna_duration_bar" type="id" />
+    <item name="dlna_play_time" type="id" />
+    <item name="dlna_play_total_time" type="id" />
+</resources>

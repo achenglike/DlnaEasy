@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dlna_select_device">select device to render</string>
+    <string name="dlna_refresh_devices_describe">refresh dlna device list</string>
+    <string name="dlna_searching">searching now</string>
+    <string name="dlna_searched_fail">No device found. make sure devices on same network</string>
+    <string name="dlna_searched_success">Search complete</string>
+
+    <string name="dlna_render_device">Render device</string>
+    <string name="dlna_no_bind_devices">Device is not bound</string>
+    <string name="dlna_change_device">Change device ></string>
+</resources>

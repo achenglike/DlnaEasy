@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DLNASearchView">
+        <attr format="reference" name="dlna_search_layout_id"/>
+    </declare-styleable>
+    <declare-styleable name="DLNAControlView">
+        <attr format="reference" name="dlna_control_layout_id"/>
+    </declare-styleable>
+</resources>

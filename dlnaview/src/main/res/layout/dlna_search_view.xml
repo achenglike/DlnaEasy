@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/dlna_tip_bg"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp">
+
+            <TextView
+                android:id="@id/dlna_select_device_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:text="@string/dlna_select_device"
+                android:textColor="@color/dlna_tip_color"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@id/dlna_refresh_device"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end|center_vertical"
+                android:contentDescription="@string/dlna_refresh_devices_describe"
+                android:src="@drawable/dlna_refresh" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/dlna_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@id/dlna_search_loading"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="6dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/dlna_loading_more_anim"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/dlna_search_loading_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@string/dlna_searching"
+                android:textColor="@color/dlna_tip_color"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/dlna_search_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textColor="@color/dlna_error_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
