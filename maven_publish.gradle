@@ -1,0 +1,34 @@
+apply plugin: 'maven-publish'
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def repositoryUsername = properties.getProperty('NEXUS_USERNAME')
+def repositoryPassword = properties.getProperty('NEXUS_PASSWORD')
+def mavenRepositoryUrl = properties.getProperty('RELEASE_REPOSITORY_URL')
+def POM_GROUP_ID = properties.getProperty('POM_GROUP_ID')
+
+afterEvaluate {
+
+    publishing {
+        publications {
+            mavenAar(MavenPublication) {
+                from components.release
+                groupId POM_GROUP_ID
+                artifactId POM_ARTIFACT_ID
+                version VERSION_NAME
+            }
+        }
+
+        repositories {
+            maven {
+                url mavenRepositoryUrl
+                allowInsecureProtocol true
+                credentials {
+                    username repositoryUsername
+                    password repositoryPassword
+                }
+            }
+        }
+    }
+
+}
