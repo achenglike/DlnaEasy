@@ -20,4 +20,5 @@
     <item name="dlna_duration_bar" type="id" />
     <item name="dlna_play_time" type="id" />
     <item name="dlna_play_total_time" type="id" />
+    <item name="dlna_progress_tag" type="id" />
 </resources>

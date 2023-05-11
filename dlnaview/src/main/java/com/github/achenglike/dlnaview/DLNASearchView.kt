@@ -206,6 +206,9 @@ class DLNASearchView @JvmOverloads constructor(
     }
 
     fun refresh() {
+        if (searching.value == true) {
+            return
+        }
         log("refresh called")
         deviceAdapter.clear()
         context.applicationContext.bindService(

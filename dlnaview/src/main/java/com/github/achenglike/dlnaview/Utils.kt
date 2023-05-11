@@ -12,7 +12,7 @@ import org.seamless.util.MimeType
 import java.time.LocalTime
 
 fun log(info: String) {
-    Log.e("dlna", info)
+    Log.d("dlna", info)
 }
 
 fun VideoData.metadata(): String? {

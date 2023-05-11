@@ -89,7 +89,14 @@ class DLNAControlView @JvmOverloads constructor(
             durationBar.max = second.toInt()
         }
         curProgress = cur.timeToSeconds()
-        durationBar.progress = curProgress.toInt()
+
+        val newValue = curProgress.toInt()
+        val lastValue = durationBar.getTag(R.id.dlna_progress_tag) as? Int ?:0
+        durationBar.setTag(R.id.dlna_progress_tag, newValue)
+        // 处理seek的时候会先得到progress=0的问题 非0 或者 是0且上一次也是0 进行更新
+        if (newValue > 0 || lastValue == 0) {
+            durationBar.progress = curProgress.toInt()
+        }
     }
 
     init {
